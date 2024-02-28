@@ -1,0 +1,77 @@
+.CardProduct{
+    /* max-height: 280px; */
+    min-height: 300px;
+    width: 210px !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    /* margin: 10px; */
+    position: relative;
+    padding-bottom: 2px;
+}
+.ImageCardContainer{
+    padding: 20px;
+    background-color: #e2e2e2;
+    /* height: 95%; */
+}
+.ProductRegularPrice{
+    font-family: 'STCBold';
+    font-size: 13px;
+    /* font-weight: 900 !important; */
+    white-space: nowrap;
+}
+.ProductDiscountPrice{
+    font-family: 'STCBold';
+    font-size: 11px;
+    text-decoration: line-through;
+
+}
+.ProductName{
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'STCBold';
+    font-weight: 900 !important;
+}
+.Price{
+    font-family: 'STCBold';
+    font-size: 15px;
+    font-weight: 900 !important;
+    color: #cc9a25;
+}
+.DiscountPrice{
+    font-family: 'STCBold';
+    font-size: 14px;
+    font-weight: 900 !important;
+}
+.ProductDescription{
+    font-size: 11px;
+    font-weight: 900;
+    text-align: end;
+    position: relative;
+    top: -9px;
+    height: fit-content;
+}
+.DiscountContainer{
+    position: relative;
+    top: -9px;
+    background: black;
+    color: white;
+    font-size: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.Rate img{
+    width: 12px;
+}
+.Rate{
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 600;
+}
+.ProductCol{
+    width: 50% !important;
+}

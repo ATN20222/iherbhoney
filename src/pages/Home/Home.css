@@ -1,0 +1,98 @@
+.FirstHomeSection{
+    margin-top: 15px;
+}
+.CategoriesSection{
+    margin-top: 20px;
+}
+.CategoryBtn{
+    width: 70%;
+    height: 100%;
+    border-radius: 50px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.CategoryBtn span{
+    width: 100%;
+}
+
+.CategoryText{
+    white-space: nowrap;
+    font-size: 22px ;
+    padding-right: 20px;
+}
+.CategoryItem{
+    position: relative;
+}
+.CategoryItem::after {
+    content: ""; 
+    position: absolute; 
+    top: 30%; 
+    right: 0; 
+    height: 40%; 
+    width: 4px; 
+    background-color: #000; 
+  }
+.FirstSliderSection{
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+}
+.SliderHeader{
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.ShowMoreProductsBtn{
+    border-radius: 18px !important;
+    color: white !important;
+    width: 80px;
+}
+
+.SecondSliderSection{
+    margin-top: 20px;
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.SubscribeSection{
+    padding: 50px;
+}
+.SubscribingText h1{
+    font-size: 60px;
+}
+.SubscribingText h5{
+    font-size: 20px;
+    padding: 10px;
+}
+.SubscribingInput{
+    padding: 10px;
+    position: relative;
+}
+.SubscribingInput input{
+    border: 1px solid black;
+    padding-left: 20px !important;
+    border-radius: 18px;
+}
+.SubscribingInput svg{
+    position: absolute;
+    top: 25%;
+    right: 15px;
+    color: #fbd203;
+    width: 30px;
+    height: 30px;
+}
+.slick-slide > div{
+    display: flex;
+    justify-content: center;
+}
+.slick-list{
+    cursor: grab;
+}
+.slick-list:active {
+    cursor: grabbing;
+}
+

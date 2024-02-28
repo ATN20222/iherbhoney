@@ -1,0 +1,22 @@
+.ProductNewCard{
+    min-height: 300px;
+    width: 210px !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    /* margin: 10px; */
+    position: relative;
+    padding: 20px;
+    /* padding-bottom: 2px; */
+    box-shadow: none !important;
+    border: none !important;
+}
+.ImageNewCardContainer{
+    padding: 20px;
+    background-color: white;
+}
+
+.ProductNewCardDescription{
+    font-size: 12px;
+    font-family: 'STCBold';
+    text-align: center;
+}
