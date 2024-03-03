@@ -9,6 +9,9 @@
     height: 100%;
     border-radius: 50px !important;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none !important;
+    outline: none !important;
+    color: black !important;
 }
 .CategoryBtn span{
     width: 100%;

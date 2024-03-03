@@ -16,21 +16,3 @@
 .custom-next {
     right: -50px; 
 }
-@media (max-width:600px) {
-    .custom-next {
-        position: absolute;
-        top: 45%;
-        right: 0px !important;
-        /* color: #fbd203; */
-        width: 30px;
-        height: 30px;
-    }
-    .custom-prev {
-        position: absolute;
-        top: 40%;
-        left: 0px !important;
-        /* color: #fbd203; */
-        width: 30px;
-        height: 30px;
-    }
-}

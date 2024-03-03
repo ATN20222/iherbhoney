@@ -1,0 +1,125 @@
+@media (max-width:1290px) {
+    .FavHeader{
+        padding-right: 20px !important;
+    }
+    .FavHeaderDirectionLtr{
+        padding-left: 20px !important;
+    }   
+ }
+@media (min-width:990px) {
+    .CardProduct{
+        width: 180px !important;
+    }
+ }
+
+@media (max-width:990px) {
+    .AllProductsContainer{
+        padding-right: 0px !important;
+    }
+    .MailingImg{
+        max-width: 300px;
+    }
+    .SubscribingText h1{
+        font-size: 50px ;
+    }
+    .CategoryItem,.CategoryLastItem{
+        width: 25% !important;
+    }
+    .CategoryText{
+        display: none;
+    }
+    .CategoryBtn {
+        width: 80%;
+        max-width: 150px;
+    }
+    .OrderdByContainer{
+        margin-top: 20px !important;
+    }
+}
+
+@media (max-width:768px) {
+    
+}
+@media (max-width:600px) {
+    .custom-next {
+        position: absolute;
+        top: 45%;
+        right: 0px !important;
+        /* color: #fbd203; */
+        width: 30px;
+        height: 30px;
+    }
+    .custom-prev {
+        position: absolute;
+        top: 40%;
+        left: 0px !important;
+        /* color: #fbd203; */
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media (max-width:580px) {
+    .FooterRow .col-md-4{
+        width: 33.33333%;
+    }
+    .SelectedFilters {
+        justify-content: center !important;
+       
+    }
+    .SelectedFilters .row .col-sm-3{
+        width: 25%;
+    }
+}
+@media (max-width:545px) {
+    
+    .FooterRow .col-md-4{
+        width: 100%;
+    }
+    .FooterRow .col-md-4 .row{
+        width: 100%;
+    }
+    .FooterListItem{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+    }
+    .CategoryBtn img {
+        width: 80%;
+        max-width: 150px;
+    }
+    .CategoryItem::after {
+        content: "";
+        position: absolute;
+        top: 30%;
+        right: 0;
+        height: 40%;
+        width: 2px !important;
+        background-color: #000;
+    }
+}
+ @media (min-width:440px) {
+    .CardProduct{
+        width: 210px !important;
+    }
+    .ProductNewCard {
+        width: 210px !important;
+    }
+ }
+ @media (max-width:440px) {
+    .CardProduct{
+        width: 180px !important;
+    }
+    .ProductNewCard {
+        width: 180px !important;
+    }
+ }
+
+ @media (max-width:360px) {
+    
+    .ProductNewCard {
+        width: 150px !important;
+    }
+ }

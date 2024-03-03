@@ -59,7 +59,7 @@ const Navbar = () => {
                     <div className="col-lg-9 RightNav">
                         <ul class="list-unstyled row">
                             <li className="nav-item col-lg-2">
-                                <Link className={`nav-link ${NavFont}`} to="categories"> {t('categories')}</Link>
+                                <Link className={`nav-link ${NavFont}`} to="Deals"> {t('Deals')}</Link>
                             </li>
                             <li className="nav-item col-lg-2"> 
                                 <Link className={`nav-link ${NavFont}`} to="products"> {t('products')}</Link>

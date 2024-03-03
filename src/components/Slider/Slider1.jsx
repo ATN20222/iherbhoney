@@ -8,14 +8,13 @@ const Slider1=()=>{
     const CustomPrevArrow = (props) => (
         <div className="custom-arrow custom-prev" onClick={props.onClick}>
             <FontAwesomeIcon icon={faPlay} />
-            {/* &lt; */}
+            
         </div>
     );
 
     const CustomNextArrow = (props) => (
         <div className="custom-arrow custom-next" onClick={props.onClick}>
-            {/* Your custom right arrow icon or content */}
-            {/* &gt; */}
+            
             <FontAwesomeIcon icon={faPlay}/>
         </div>
     );
@@ -88,16 +87,16 @@ const Slider1=()=>{
         <div className="slider-container container">
         <Slider {...settings}>
             
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
+                <ProductCard IsInHome={true}/>
             
                 
             

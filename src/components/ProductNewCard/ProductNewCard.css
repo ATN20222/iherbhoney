@@ -1,6 +1,5 @@
 .ProductNewCard{
     min-height: 300px;
-    width: 210px !important;
     border-radius: 20px !important;
     overflow: hidden;
     /* margin: 10px; */
@@ -9,6 +8,7 @@
     /* padding-bottom: 2px; */
     box-shadow: none !important;
     border: none !important;
+    border-radius: 0 !important;
 }
 .ImageNewCardContainer{
     padding: 20px;
@@ -19,4 +19,16 @@
     font-size: 12px;
     font-family: 'STCBold';
     text-align: center;
+}
+.DiscountNewCardContainer{
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    background-color: #f33d3c;
+    top: -42px;
+    rotate: -45deg;
+    left: -51px;
+    padding-top: 50px;
+    padding-left: 43px;
+    padding-right: 44px;
 }

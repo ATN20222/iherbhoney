@@ -2,11 +2,25 @@ import React, { useEffect, useState } from 'react';
 import './ProductCard.css';
 import ProductImg from '../../Assets/Images/ProductImage.png'
 import Star from '../../Assets/Images/star.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+    const [isFav, setIsFav] = useState(false);
+    const handleFavClick = () => {
+        setIsFav(!isFav);
+    };
+    const buttonClass = `btn FavBtn ${isFav ? 'AddedToFav' : ''}`;
     return(
         
-            <div className="row card col-lg-2 CardProduct">
+            <div className="row card col-lg-2 col-sm-2 CardProduct">
+                {!props.IsInHome && (
+                        
+                            <button className={buttonClass} onClick={handleFavClick}>
+                                <FontAwesomeIcon icon={faHeart} />
+                            </button>   
+                        
+                    )}
                 <div className="col-lg-12 Center ImageCardContainer">
                     <img src={ProductImg} width="80%" alt="" srcset="" />
                 </div>

@@ -88,14 +88,13 @@ const Slider2=()=>{
     return(
         <div className="slider-container container">
         <Slider {...settings}>
-                <ProductNewCard/>
-                <ProductNewCard/>
-                <ProductNewCard/>
-                <ProductNewCard/>
-                <ProductNewCard/>
-                <ProductNewCard/>
+                <ProductNewCard IsInHome = {true}/>
+                <ProductNewCard IsInHome = {true}/>
+                <ProductNewCard IsInHome = {true}/>
+                <ProductNewCard IsInHome = {true}/>
+                <ProductNewCard IsInHome = {true}/>
+                <ProductNewCard IsInHome = {true}/>
                 
-            
         </Slider>
         </div>
         

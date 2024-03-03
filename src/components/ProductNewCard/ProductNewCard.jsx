@@ -3,11 +3,18 @@ import './ProductNewCard.css';
 import ProductImg from '../../Assets/Images/ProductImage.png';
 import Star from '../../Assets/Images/star.png';
 
-const ProductNewCard = ()=>{
+const ProductNewCard = (props)=>{
     return(
-           
             
 <div className="card col-lg-2 ProductNewCard">
+    {!props.IsInHome && (
+            
+            <div className='DiscountNewCardContainer'>
+                <span> <b>20%</b> <br /> OFF</span>
+            </div>
+        
+    )}
+    
 <div className="col-lg-12 Center ImageNewCardContainer">
     <img src={ProductImg} width="80%" alt="" srcset="" />
 </div>
@@ -26,11 +33,19 @@ const ProductNewCard = ()=>{
             <span>(10)</span>
         </div>
         <div className="priceNewCard">
+        <s className='ProductRegularPrice' dir='rtl'>
+                <span className='Price'> 80</span>
+                <span className='CurrancyName'>درهم اماراتي</span>
+                
+            </s>
+            <br />
             <span className='ProductRegularPrice' dir='rtl'>
                 <span className='Price'> 22 </span>
                 <span className='CurrancyName'>درهم اماراتي</span>
                 
             </span>
+            
+            
         </div>
     </div>
         
