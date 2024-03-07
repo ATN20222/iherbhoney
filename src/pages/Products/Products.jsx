@@ -9,15 +9,44 @@ import Star from '../../Assets/Images/star.png';
 import Ad from '../../Assets/Images/AD.png'
 import Collapse from '../../components/Collapse/Collapse.jsx';
 import ProductNewCard from '../../components/ProductNewCard/ProductNewCard.jsx';
-
+import Filters from './Fitlers.jsx';
+import FilterImg from '../../Assets/Images/filter.svg';
 
 const Products = (props) => {
+  const [isSmallWidth, setIsSmallWidth] = useState(window.innerWidth < 990);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallWidth(window.innerWidth < 990);
+    };
+
+    
+  }, []);
+
+
+
+  const [isFilterListOpen, setIsFilterListOpen] = useState(false);
+
+  const handleFilterButtonClick = () => {
+    setIsFilterListOpen(!isFilterListOpen);
+  };
+
+  const handleShadowDivClick = () => {
+    if (isFilterListOpen) {
+      setIsFilterListOpen(false);
+    }
+  };
+  const handleInnerDivClick = (e) => {
+    e.stopPropagation();
+  };
+
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
 };
   const [checkedItems, setCheckedItems] = useState([]);
+  
 
   const handleCollapseToggle = (isOpen, newCheckedItems) => {
     if (!isOpen) {
@@ -65,6 +94,14 @@ const Products = (props) => {
     //   </div>
     // </div>
     <section className='AllProductsSection'>
+        {isSmallWidth &&isFilterListOpen && (
+          <div className={`Shadow ${isFilterListOpen ? 'active' : ''}`} onClick={handleShadowDivClick}>
+            <div className="card SettingsCard CardFilters" onClick={handleInnerDivClick}>
+              <Filters />
+            </div>
+          </div>
+        
+          )}
       <div className="Container">
             <div className="HeaderRow row">
               <div className="col-lg-7">
@@ -113,6 +150,11 @@ const Products = (props) => {
                 
                 </div>
               <div className="col-lg-4 OrderdByContainer">
+              {isSmallWidth && (
+                  
+                <button onClick={handleFilterButtonClick} className='btn d-flex Center FiltersBtn'><img src={FilterImg} width="15px"  alt="" />FILTER</button>
+              )}
+
                 <select id='OrderdBy' className='form-select'>
                     
                     <option dir='rtl' selected>{t("PriceFromHighToLow")}</option>
@@ -124,7 +166,7 @@ const Products = (props) => {
               
               
             </div>
-            {!props.IsDeals && (
+                {!props.IsDeals && (
                         
               <div className="row">
                 <ProductCard IsInHome={false}/>
@@ -175,9 +217,9 @@ const Products = (props) => {
                 <ProductCard IsInHome={false}/>
               </div>
                     
-                )}
+                  )}
 
-{props.IsDeals && (
+                {props.IsDeals && (
                         
                         <div className="row">
               <ProductNewCard IsInHome={false}/>
@@ -233,136 +275,14 @@ const Products = (props) => {
             
           </div>
           
-          <div className="col-lg-3">
-            <div className="card SettingsCard">
-              <div className="AllSettingsContainer">
-                <div className="row">
-                  <div className="col-lg-12">
-                  <div>
-                    <Collapse title={t('Category')}>
-                    <div class="CollapsedItems" dir='ltr'>
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            منتجات عسل
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            شمع عسل
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            وصفات طبية
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-                        
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            صحة
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-                      </div>
-                    </Collapse>
-
-
-                    <Collapse title={t('Price')}>
-                    <div class="CollapsedItems" dir='ltr'>
-                        
-                        
-                        
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            من 10 الي 50 درهم
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            من 100 الي 250 درهم
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-                      </div>
-                    </Collapse>
-
-
-                    
-
-                    <Collapse title={t('Rate')}>
-                    <div class="CollapsedItems" dir='ltr'>
-                        
-                        
-                        
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            <img src={Star} alt="" />
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-
-
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-                        <div className="ItemCheckBox">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <img src={Star} alt="" />
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                          </label>
-                        
-                        </div>
-                    </div>
-                    </Collapse>
-
-                  </div>
-                    <button className='btn btn-warning ApplyBtn'>( 450 {t("Result")} ) {t('Apply')}</button>
-                  </div>
-                </div>
-              </div>
+          <div className="col-lg-3 col-md-5 col-sm-5 RightFilterCol">
+            {!isSmallWidth && (
+            <div className="card SettingsCard CardFilters">
+              
+                <Filters/>
             </div>
+              )}
+            
 
             <div className="card SettingsCard ADInAllProducts">
                 <img src={Ad} alt="" width="100%" />

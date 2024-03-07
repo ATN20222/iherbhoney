@@ -10,6 +10,7 @@ import Products from './pages/Products/Products';
 import React from 'react';
 import Favourites from './pages/Favourites/Favourites.jsx';
 import Footer from './components/Footer/Footer';
+import Details from './pages/ProductDetails/Details.jsx';
 function App() {
   // window.onscroll = () => {
   //   const navbar = document.querySelector(".navbar");
@@ -32,7 +33,7 @@ function App() {
           <Route path="/Favourites" element={<Favourites/>} />
           <Route path='/products' element={<Products/>}></Route>
           <Route path='/Deals' element={<Products IsDeals={true} />}></Route>
-
+          <Route path='/Details/:productId' element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer/>
